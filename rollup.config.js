@@ -36,10 +36,10 @@ const aliases = alias({
   resolve: ['.svelte', '.js', '.ts'], //optional, by default this will just look for .js files or folders
   entries: [
     { find: 'public', replacement: 'public' },
+		{ find: 'lib', replacement: 'src/lib' },
     { find: 'types', replacement: 'src/types' },
     { find: 'utils', replacement: 'src/utils' },
-    { find: 'components', replacement: 'src/components' },
-    { find: 'lib', replacement: 'src/lib' },
+    { find: 'components', replacement: 'src/components' }
   ]
 });
 
@@ -52,6 +52,7 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		aliases,
 		svelte({
 			preprocess: sveltePreprocess({ sourceMap: !production }),
 			compilerOptions: {
