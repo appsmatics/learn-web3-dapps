@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+import alias from '@rollup/plugin-alias';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -29,6 +30,18 @@ function serve() {
 		}
 	};
 }
+
+
+const aliases = alias({
+  resolve: ['.svelte', '.js', '.ts'], //optional, by default this will just look for .js files or folders
+  entries: [
+    { find: 'public', replacement: 'public' },
+    { find: 'types', replacement: 'src/types' },
+    { find: 'utils', replacement: 'src/utils' },
+    { find: 'components', replacement: 'src/components' },
+    { find: 'lib', replacement: 'src/lib' },
+  ]
+});
 
 export default {
 	input: 'src/main.ts',
