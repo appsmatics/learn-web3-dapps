@@ -31,7 +31,7 @@ function serve() {
 	};
 }
 
-
+//https://dev.to/sjafferi/absolute-paths-in-svelte-488c
 const aliases = alias({
   resolve: ['.svelte', '.js', '.ts'], //optional, by default this will just look for .js files or folders
   entries: [
