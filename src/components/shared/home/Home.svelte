@@ -1,9 +1,12 @@
 <script lang="ts">
-  //TODO: Need abds path here. Why?
+  //TODO: Need to specify the non aliased path here and the .ts extension
+  // else it does not work. Need to investigate the aliases plugin config.
+  // Sti
   import {colors} from '../../../utils/colors.ts'
+  import {getDataIndexingItems, getIdentityItems} from '../../../utils/constants.ts'
+  import {getStorageItems, getChainsList} from '../../../utils/constants.ts'
 
-  const PROTOCOL_BOX_LENGTH = 100
-  const PROTOCOL_ICON_LENGTH = 30;
+  import ChainRow from './ChainRow.svelte';
 
 </script>
 
@@ -23,8 +26,17 @@
       </h1>
       <div class="row">
         <div class="col">
-          
+          <ChainRow title="Data Indexing" chains={getDataIndexingItems()}></ChainRow>
         </div>
+        <div class="col">
+          <ChainRow title="Identity" chains={getIdentityItems()}></ChainRow>
+        </div>
+        <div class="col">
+          <ChainRow title="Storage" chains={getStorageItems()}></ChainRow>
+        </div>
+      </div>
+      <div class="row">
+        <ChainRow title="Chains" chains={getChainsList()}></ChainRow>
       </div>
 
     </div>
@@ -45,8 +57,8 @@
   .brand { 
     font-size: 0.6em;
   }
-
   span a:hover {
     text-decoration: underline;
   }
+  
 </style>

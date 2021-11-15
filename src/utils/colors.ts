@@ -1,14 +1,10 @@
-import {CHAINS} from '../types';
+import {CHAINS} from './types.ts';
+import type {ChainColorsType} from './types.ts'
 
 export const colors = {
   figmentYellow: '#FFF29B',
   darkBackground: 'rgb(33, 37, 41)',
-};
-
-type ChainColorsType = {
-  primaryColor: string;
-  secondaryColor: string;
-};
+}
 
 export const getChainColors = (chainId: CHAINS): ChainColorsType => {
   return {
@@ -43,8 +39,12 @@ const getPrimaryColor = (chainId: CHAINS) => {
 };
 
 const getSecondaryColor = (chainId: CHAINS) => {
+  return 'white'
+}
+
+const getSecondaryColorOrig = (chainId: CHAINS) => {
   if (chainId === CHAINS.SOLANA) {
-    return 'black';
+    return 'white';
   } else if (chainId === CHAINS.AVALANCHE) {
     return '#F6F6F6';
   } else if (chainId === CHAINS.THE_GRAPH) {

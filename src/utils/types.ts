@@ -169,6 +169,11 @@ export type ChainType = {
   network: NETWORKS;
 };
 
+export type ChainColorsType = {
+  primaryColor: string;
+  secondaryColor: string;
+};
+
 export type ChainsType = {
   [key in CHAINS]: ChainType;
 };
