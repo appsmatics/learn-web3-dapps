@@ -59,8 +59,9 @@
   }
   .coming-soon {
     position: absolute;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
     height: 42px;
     width: 42px;
     top: -12px;
