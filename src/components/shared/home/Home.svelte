@@ -20,7 +20,7 @@
             target="_blank"
             rel="noreferrer"
           >
-            Figment
+            Appsmatics
           </a>
         </span>
       </h1>
