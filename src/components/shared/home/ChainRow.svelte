@@ -14,7 +14,12 @@
   </div>
   <div class="space-right">
     {#each chains as  chain}
-    <Protocol chain={chain}></Protocol>
+      <Protocol chain={chain}></Protocol>
+      {#if !chain.active}
+      <span class="coming-soon" style="background-color: {colors.figmentYellow}">
+        Soon!
+      </span>
+    {/if}
     {/each}
   </div>
 </div>
@@ -27,7 +32,7 @@
   }
 
   .section-title {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 20px;
     color: white;
     font-weight: 500;
@@ -40,5 +45,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     /* justify-content: space-between; */
+  }
+  .coming-soon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 42px;
+    top: -10px;
+    right: 40px;
+    text-align: center;
+    border-radius: 10%;
+    font-size: 0.8em;
+    color: #555;
+    font-weight: 5  00;
   }
 </style>

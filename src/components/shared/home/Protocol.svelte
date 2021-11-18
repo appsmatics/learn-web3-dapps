@@ -15,19 +15,16 @@
 </script>
 
 <div class="protocol-box" style="{colorCSS}">
-  {#if !chain.active}
-    <div class="coming-soon" style="background-color: {colors.figmentYellow}">
-      Soon!
-    </div>
-  {/if}
-    <img src="{chain.logoUrl}" alt="" class="protocol-logo">
-    <div class="protocol-label">
-      {chain.label}
-    </div>    
+    <a href="/{chain.id}">
+      <img src="{chain.logoUrl}" alt="" class="protocol-logo">
+      <div class="protocol-label">
+        {chain.label}
+      </div>  
+    </a>  
 </div>
 
 <style>
-  .protocol-box {
+  .protocol-box a {
     position: relative;
 
     height: 100px;
@@ -44,11 +41,14 @@
     margin-bottom: 20px;
   }
 
-  .protocol-box:hover {
+  a:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color)
   }
-
+  a {
+    text-decoration: none;
+    color: black;
+  }
   .protocol-logo {
     height: 30px;
     margin-bottom: 10px;
@@ -57,20 +57,4 @@
     font-size: 16px;
     font-weight: 500;
   }
-  .coming-soon {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 42px;
-    width: 42px;
-    top: -12px;
-    right: -12px;
-    text-align: center;
-    border-radius: 10%;
-    font-size: 0.8em;
-    color: #555;
-    font-weight: 500;
-  }
-
 </style>

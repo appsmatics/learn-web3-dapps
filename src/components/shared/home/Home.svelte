@@ -8,19 +8,21 @@
 
   import ChainRow from './ChainRow.svelte';
 
+  export let brand = "Figment"
 </script>
 
+
 <div class="wrapper" style="background: {colors.darkBackground}">
-  <div style="padding: 60px">
-    <div class="container">
+    <div class="container" style="padding: 100px">
       <h1 class="title">Learn the Web 3 stack{' '}
-        <span class="brand" style="color: {colors.figmentYellow}">by{' '}
-          <a style="color: {colors.figmentYellow}"
+        <span
+         style="color: {colors.figmentYellow}">
+          <a class="brand" style="color: {colors.figmentYellow}"
             href="https://learn.figment.io/"
             target="_blank"
             rel="noreferrer"
           >
-            Appsmatics
+            by {brand}
           </a>
         </span>
       </h1>
@@ -38,9 +40,7 @@
       <div class="row">
         <ChainRow title="Chains" chains={getChainsList()}></ChainRow>
       </div>
-
     </div>
-  </div>
 </div>
 
 
@@ -50,15 +50,20 @@
     height: 100vh;
   }
   .title {
-    font-size: 3.5em;
+    font-size: 3.0em;
     margin-bottom: 60px;
     color: white;
   }
   .brand { 
     font-size: 0.6em;
   }
+
+  span a {
+    text-decoration: none;
+  }
   span a:hover {
     text-decoration: underline;
+    color: red;
   }
   
 </style>
