@@ -4,6 +4,7 @@
   import {getChainColors, colors} from '../../../utils/colors.ts'
   export let chain: ChainType = {}
   
+  import {Link} from 'svelte-routing'
   const chainColors = getChainColors(chain.id)
   const colorCSS = `--primary-color: ${chainColors.primaryColor};
     --secondary-color: ${chainColors.secondaryColor}`
@@ -15,16 +16,16 @@
 </script>
 
 <div class="protocol-box" style="{colorCSS}">
-    <a href="/{chain.id}">
+    <Link to="/{chain.id}">
       <img src="{chain.logoUrl}" alt="" class="protocol-logo">
       <div class="protocol-label">
         {chain.label}
       </div>  
-    </a>  
+    </Link>  
 </div>
 
 <style>
-  .protocol-box a {
+  .protocol-box {
     position: relative;
 
     height: 100px;
