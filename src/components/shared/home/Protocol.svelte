@@ -1,10 +1,10 @@
-
 <script lang="ts">
+  import {link} from 'svelte-routing'
+
   import type {ChainType} from '../../../utils/types.ts'
   import {getChainColors, colors} from '../../../utils/colors.ts'
   export let chain: ChainType = {}
   
-  import {Link} from 'svelte-routing'
   const chainColors = getChainColors(chain.id)
   const colorCSS = `--primary-color: ${chainColors.primaryColor};
     --secondary-color: ${chainColors.secondaryColor}`
@@ -16,18 +16,18 @@
 </script>
 
 <div class="protocol-box" style="{colorCSS}">
-    <Link to="/{chain.id}">
+  <a href="/{chain.id}" use:link>
       <img src="{chain.logoUrl}" alt="" class="protocol-logo">
       <div class="protocol-label">
         {chain.label}
       </div>  
-    </Link>  
-</div>
+    </a>  
+  </div>
 
+  
 <style>
-  .protocol-box {
+  .protocol-box a {
     position: relative;
-
     height: 100px;
     width: 100px;
     border: solid 1px #eee;
