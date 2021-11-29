@@ -1,8 +1,13 @@
-<h1>Solana</h1>
+<script lang="ts">
+  import Header from '../../../components/shared/layout/Header.svelte'
+  import Footer from '../../../components/shared/layout/Footer.svelte'
+</script>
+
+<div class="row">
+  <Header ></Header>
+  <Footer></Footer>  
+</div>
+
 
 <style>
-  h1 {
-    margin-top: 50px;
-    text-align: center;
-  }
 </style>

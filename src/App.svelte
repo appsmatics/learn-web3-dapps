@@ -1,5 +1,5 @@
 <script lang="ts">	
-	import {Router, Route, Link} from 'svelte-routing'
+	import {Router, Route} from 'svelte-routing'
 	import Home from 'components/shared/home/Home.svelte'
 	import Solana from './components/protocols/solana/Solana.svelte'
 </script>
