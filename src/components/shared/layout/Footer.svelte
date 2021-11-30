@@ -11,7 +11,7 @@
   <div class="row justify-content-between">
     <div class="col align-items-center">
         {#if !isFirstStep}
-          <button class="btn btn-primary">{previousStepTitle}</button>
+          <button class="btn btn-primary button">{previousStepTitle}</button>
         {/if}
       </div>
     <div class="col align-items-center">

@@ -19,10 +19,30 @@
 </nav> -->
 
 <nav class="navbar navbar-custom" style="height: {HEADER_HEIGHT}px; background: {colors.primaryColor}">
-  <img src="figment-learn-compact.svg" alt="Figment Learn" height={47} width={100}>
-  <div class="container-fluid">
-    <h3>Pathways > {chain}</h3>
+  <div class="col">
+  <div class="row align-items-center">
+    <div class="col col1">
+      <img src="figment-learn-compact.svg" alt="Figment Learn" height={47} width={100}>
+    </div>
+    <div class="col-6">
+      <div class="">Pathways > {chain}</div>
+    </div>
+    <div class="col">
+      <div class="row align-items-center">
+        <a
+          href="https://discord.com/invite/fszyM7K"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div class="discord">
+            Need help? Find us on
+            <img src='discord.svg' alt="Discord" height={22} width={100}>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
+</div>
 </nav>
 
 <style>
@@ -38,9 +58,20 @@
     /* background: ${({primary_color}) => primary_color}; */
     border-bottom: solid 2px black;  
   }
-  h3 {
-    font-size: 24px;
+  .col1 {
+    max-width: 10%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .discord {
     font-weight: 600;
-    margin-left: 240px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    background: yellow;
+    color: black !important;
+    box-shadow: #9b9b9b 0px 0px 5px 1px;
   }
 </style>
