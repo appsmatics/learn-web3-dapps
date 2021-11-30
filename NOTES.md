@@ -21,4 +21,9 @@ const aliases = alias({
     { find: 'utils', replacement: 'src/utils' },
     { find: 'components', replacement: 'src/components' }
   ]
+
+  entries2: [
+    { find: 'src', replacement: './src' },
+  ]
 });
+
