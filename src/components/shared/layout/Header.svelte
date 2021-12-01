@@ -1,7 +1,7 @@
 <script lang="ts">
-  import {HEADER_HEIGHT} from '../../../utils/constants';
-  import {getChainColors} from '../../../utils/colors'
-  import {CHAINS} from '../../../utils/types'
+  import {HEADER_HEIGHT} from 'src/utils/constants';
+  import {getChainColors} from 'src/utils/colors'
+  import {CHAINS} from 'src/utils/types'
 
   const colors = getChainColors(CHAINS.SOLANA)
 

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type {ChainType} from '../../../utils/types.ts'
-  import {colors} from '../../../utils/colors.ts'
+  import type {ChainType} from 'src/utils/types'
+  import {colors} from 'src/utils/colors'
 
   import Protocol from './Protocol.svelte'
   export let title;

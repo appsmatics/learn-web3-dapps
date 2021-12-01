@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Header from '../../../components/shared/layout/Header.svelte'
-  import Footer from '../../../components/shared/layout/Footer.svelte'
+  import Header from 'src/components/shared/layout/Header.svelte'
+  import Footer from 'src/components/shared/layout/Footer.svelte'
 </script>
 
 <div class="row">

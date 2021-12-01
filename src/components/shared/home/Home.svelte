@@ -2,19 +2,19 @@
   //TODO: Need to specify the non aliased path here and the .ts extension
   // else it does not work. Need to investigate the aliases plugin config.
   // Sti
-  import {colors} from '../../../utils/colors.ts'
-  import {getDataIndexingItems, getIdentityItems} from '../../../utils/constants.ts'
-  import {getStorageItems, getChainsList} from '../../../utils/constants.ts'
+  import {colors} from 'src/utils/colors'
+  import {getDataIndexingItems, getIdentityItems} from 'src/utils/constants'
+  import {getStorageItems, getChainsList} from 'src/utils/constants'
 
   import ChainRow from './ChainRow.svelte';
 
-  export let brand = "Figment"
+  export let brand = "Appsmatics"
 </script>
 
 
 <div class="wrapper" style="background: {colors.darkBackground}">
     <div class="container" style="padding: 100px">
-      <h1 class="title">Learn the Web 3 stack{' '}
+      <h1 class="title">Web 3 stack{' '}
         <span
          style="color: {colors.figmentYellow}">
           <a class="brand" style="color: {colors.figmentYellow}"

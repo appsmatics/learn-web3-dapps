@@ -31,17 +31,8 @@ function serve() {
 	};
 }
 
-//https://dev.to/sjafferi/absolute-paths-in-svelte-488c
-const aliases = alias({
-  resolve: ['.svelte', '.js', '.ts'], //optional, by default this will just look for .js files or folders
-  entries: [
-    { find: 'public', replacement: 'public' },
-		{ find: 'lib', replacement: 'src/lib' },
-    { find: 'types', replacement: 'src/types' },
-    { find: 'utils', replacement: 'src/utils' },
-    { find: 'components', replacement: 'src/components' }
-  ]
-});
+// plugin-alias
+// https://dev.to/sjafferi/absolute-paths-in-svelte-488c
 
 export default {
 	input: 'src/main.ts',
@@ -52,13 +43,16 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
-		aliases,
 		svelte({
 			preprocess: sveltePreprocess({ sourceMap: !production }),
 			compilerOptions: {
 				// enable run-time checks when not in production
-				dev: !production
-			}
+				dev: !production,
+				// emitCss: true, // without this, <style> in components are not included in bundle
+				// css: css => {
+				// 	css.write('public/build/bundle.css')
+				// }
+			},	
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
@@ -78,6 +72,19 @@ export default {
 			sourceMap: !production,
 			inlineSources: !production
 		}),
+
+		alias({
+			resolve: ['.svelte', '.js', '.ts'], //optional, by default this will just look for .js files or folders
+			entries: [
+				// { find: 'public', replacement: 'public' },
+				{ find: 'src', replacement: 'src' },
+				// { find: 'lib', replacement: 'src/lib' },
+				// { find: 'types', replacement: 'src/types' },
+				// { find: 'utils', replacement: 'src/utils' },
+				// { find: 'components', replacement: 'src/components' }
+			]
+		}),
+
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

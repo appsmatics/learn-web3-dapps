@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {FOOTER_HEIGHT} from '../../../utils/constants';
+  import {FOOTER_HEIGHT} from 'src/utils/constants';
 
   export let isFirstStep = false;
   export let isLastStep = false;

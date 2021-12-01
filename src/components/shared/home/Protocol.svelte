@@ -1,9 +1,9 @@
 <script lang="ts">
   import {link} from 'svelte-routing'
 
-  import type {ChainType} from '../../../utils/types.ts'
-  import {getChainColors, colors} from '../../../utils/colors.ts'
-  export let chain: ChainType = {}
+  import type {ChainType} from 'src/utils/types'
+  import {getChainColors, colors} from 'src/utils/colors'
+  export let chain: ChainType
   
   const chainColors = getChainColors(chain.id)
   const colorCSS = `--primary-color: ${chainColors.primaryColor};
