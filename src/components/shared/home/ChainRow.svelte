@@ -1,6 +1,6 @@
 <script lang="ts">
   import type {ChainType} from 'src/utils/types'
-  import {colors} from 'src/utils/colors'
+  import {themeColors} from 'src/utils/colors'
 
   import Protocol from './Protocol.svelte'
   export let title;
@@ -8,7 +8,7 @@
   $: console.log(chains)
 </script>
 
-<div class="section-container" style="--title-color: {colors.figmentYellow};">
+<div class="section-container" style="--title-color: {themeColors.discordBackground};">
   <div class="section-title">
     {title}
   </div>
@@ -16,7 +16,7 @@
     {#each chains as  chain}
       <Protocol chain={chain}></Protocol>
       {#if !chain.active}
-      <span class="coming-soon" style="background-color: {colors.figmentYellow}">
+      <span class="coming-soon" style="background-color: {themeColors.discordBackground}">
         Soon!
       </span>
     {/if}

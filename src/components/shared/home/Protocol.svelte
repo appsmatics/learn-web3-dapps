@@ -2,7 +2,7 @@
   import {link} from 'svelte-routing'
 
   import type {ChainType} from 'src/utils/types'
-  import {getChainColors, colors} from 'src/utils/colors'
+  import {getChainColors, themeColors} from 'src/utils/colors'
   export let chain: ChainType
   
   const chainColors = getChainColors(chain.id)

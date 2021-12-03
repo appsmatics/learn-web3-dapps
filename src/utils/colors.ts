@@ -1,8 +1,8 @@
 import {CHAINS} from './types';
 import type {ChainColorsType} from './types'
 
-export const colors = {
-  figmentYellow: '#FFF29B',
+export const themeColors = {
+  discordBackground: '#FFF29B',
   darkBackground: 'rgb(33, 37, 41)',
 }
 

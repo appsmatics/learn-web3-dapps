@@ -2,7 +2,7 @@
   //TODO: Need to specify the non aliased path here and the .ts extension
   // else it does not work. Need to investigate the aliases plugin config.
   // Sti
-  import {colors} from 'src/utils/colors'
+  import {themeColors} from 'src/utils/colors'
   import {getDataIndexingItems, getIdentityItems} from 'src/utils/constants'
   import {getStorageItems, getChainsList} from 'src/utils/constants'
 
@@ -12,12 +12,12 @@
 </script>
 
 
-<div class="wrapper" style="background: {colors.darkBackground}">
+<div class="wrapper" style="background: {themeColors.darkBackground}">
     <div class="container" style="padding: 100px">
       <h1 class="title">Web 3 stack{' '}
         <span
-         style="color: {colors.figmentYellow}">
-          <a class="brand" style="color: {colors.figmentYellow}"
+         style="color: {themeColors.discordBackground}">
+          <a class="brand" style="color: {themeColors.discordBackground}"
             href="https://learn.figment.io/"
             target="_blank"
             rel="noreferrer"

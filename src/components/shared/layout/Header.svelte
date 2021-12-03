@@ -1,14 +1,12 @@
 <script lang="ts">
   import {HEADER_HEIGHT} from 'src/utils/constants';
-  import {getChainColors} from 'src/utils/colors'
-  import {CHAINS} from 'src/utils/types'
-
-  const colors = getChainColors(CHAINS.SOLANA)
 
   //let primary_color = 'linear-gradient(253deg, #00FFA3, #DC1FFF)'
   // import logoSVG from 'public/figment-learn-compact.svg';
 
-  export let chain = 'Solana'
+  export let chain
+  export let chainColors
+  export let themeColors
 </script>
 
 
@@ -18,23 +16,24 @@
   </a>
 </nav> -->
 
-<nav class="navbar navbar-custom" style="height: {HEADER_HEIGHT}px; background: {colors.primaryColor}">
+<nav class="navbar navbar-custom" style="height: {HEADER_HEIGHT}px; background: {chainColors.primaryColor}">
   <div class="col">
-  <div class="row align-items-center">
+  <div class="row justify-content-start align-items-center">
     <div class="col col1">
       <img src="figment-learn-compact.svg" alt="Figment Learn" height={47} width={100}>
     </div>
-    <div class="col-6">
-      <div class="">Pathways > {chain}</div>
+    <div class="col col2 chain-title">
+      <a href ="/">Pathways > </a>
+      <span>{chain}</span>
     </div>
-    <div class="col">
+    <div class="col col3">
       <div class="row align-items-center">
         <a
           href="https://discord.com/invite/fszyM7K"
           target="_blank"
           rel="noreferrer"
         >
-          <div class="discord">
+          <div class="discord" style="background: {themeColors.discordBackground}">
             Need help? Find us on
             <img src='discord.svg' alt="Discord" height={22} width={100}>
           </div>
@@ -62,8 +61,25 @@
     max-width: 10%;
   }
 
+  .col2 {
+    /* width: 80%; */
+  }
+  .col3  {
+    max-width: 30%;
+  }
+
   a {
     text-decoration: none;
+  }
+
+  .chain-title {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 24px;
+  }
+  .chain-title a {
+    color: black;
   }
 
   .discord {
