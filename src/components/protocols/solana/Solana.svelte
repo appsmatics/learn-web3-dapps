@@ -10,7 +10,7 @@
 </script>
 
 <div class="row">
-  <Header chain="Solana" chainColors={chainColors} themeColors={themeColors}></Header>
+  <Header chainId="Solana" chainColors={chainColors} themeColors={themeColors}></Header>
   <Footer></Footer>  
 </div>
 
