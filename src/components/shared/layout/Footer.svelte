@@ -8,13 +8,13 @@
 </script>
 
 <div class="footer" style="height: {FOOTER_HEIGHT}">
-  <div class="row justify-content-between">
-    <div class="col align-items-center">
+  <div class="d-flex align-items-center justify-content-between">
+    <div class="">
         {#if !isFirstStep}
           <button class="btn btn-primary button">{previousStepTitle}</button>
         {/if}
       </div>
-    <div class="col align-items-center">
+    <div class="">
       {#if !isLastStep}
       <button class="btn btn-primary button">{nextStepTitle}</button>
      {/if}    
