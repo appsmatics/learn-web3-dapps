@@ -4,7 +4,7 @@
   //let primary_color = 'linear-gradient(253deg, #00FFA3, #DC1FFF)'
   // import logoSVG from 'public/figment-learn-compact.svg';
 
-  export let chain
+  export let chainId
   export let chainColors
   export let themeColors
 </script>
@@ -16,32 +16,32 @@
   </a>
 </nav> -->
 
-<nav class="navbar navbar-custom" style="height: {HEADER_HEIGHT}px; background: {chainColors.primaryColor}">
-  <div class="col">
-  <div class="row justify-content-start align-items-center">
-    <div class="col col1">
-      <img src="figment-learn-compact.svg" alt="Figment Learn" height={47} width={100}>
-    </div>
-    <div class="col col2 chain-title">
-      <a href ="/">Pathways > </a>
-      <span>{chain}</span>
-    </div>
-    <div class="col col3">
-      <div class="row align-items-center">
-        <a
-          href="https://discord.com/invite/fszyM7K"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div class="discord" style="background: {themeColors.discordBackground}">
-            Need help? Find us on
-            <img src='discord.svg' alt="Discord" height={22} width={100}>
-          </div>
-        </a>
+<nav class="navbar navbar-custom justify-content-between" style="height: {HEADER_HEIGHT}px; background: {chainColors.primaryColor}">
+      <div class="d-flex">
+        <div class="p-3">
+          <img src="figment-learn-compact.svg" alt="Figment Learn" height={47} width={100}>
+        </div>
+        <div class="p-3 chain-title">
+            <a href ="/">Pathways > 
+            </a>
+            <span>{chainId}</span>
+        </div>
+     </div>
+      <div class="p-3 m-0">
+        <div class="row">
+            <a
+            href="https://discord.com/invite/fszyM7K"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <div class="discord" style="background: {themeColors.discordBackground}">
+              Need help? Find us on
+              <img src='discord.svg' alt="Discord" height={22} width={100}>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+
 </nav>
 
 <style>
@@ -57,19 +57,10 @@
     /* background: ${({primary_color}) => primary_color}; */
     border-bottom: solid 2px black;  
   }
-  .col1 {
-    max-width: 10%;
-  }
-
-  .col2 {
-    /* width: 80%; */
-  }
-  .col3  {
-    max-width: 30%;
-  }
 
   a {
     text-decoration: none;
+    opacity: 0.6;
   }
 
   .chain-title {
