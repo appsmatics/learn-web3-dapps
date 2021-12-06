@@ -57,12 +57,9 @@
     /* background: ${({primary_color}) => primary_color}; */
     border-bottom: solid 2px black;  
   }
-
   a {
     text-decoration: none;
-    opacity: 0.6;
   }
-
   .chain-title {
     color: black;
     font-size: 24px;
@@ -71,6 +68,7 @@
   }
   .chain-title a {
     color: black;
+    opacity: 0.6;
   }
 
   .discord {
