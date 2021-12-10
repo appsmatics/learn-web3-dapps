@@ -28,7 +28,7 @@ import {
 
 export const GRID_LAYOUT = [13, 11];
 export const HEADER_HEIGHT = 80;
-export const FOOTER_HEIGHT = 90;
+export const FOOTER_HEIGHT = 100;
 
 const CHAINS_CONFIG: ChainsType = {
   [CHAINS.AVALANCHE]: {

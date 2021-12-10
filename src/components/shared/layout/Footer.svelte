@@ -1,9 +1,10 @@
 <script lang="ts">
   import {FOOTER_HEIGHT} from 'src/utils/constants';
 
+  //export let chain;
   export let isFirstStep = false;
   export let isLastStep = false;
-  export let nextStepTitle = "Next";
+  export let nextStepTitle = "Next: Setup the project";
   export let previousStepTitle = "Previous";
 </script>
 
@@ -11,12 +12,12 @@
   <div class="d-flex align-items-center justify-content-between">
     <div class="">
         {#if !isFirstStep}
-          <button class="btn btn-primary button">{previousStepTitle}</button>
+          <button class="btn button">{previousStepTitle}</button>
         {/if}
       </div>
     <div class="">
       {#if !isLastStep}
-      <button class="btn btn-primary button">{nextStepTitle}</button>
+      <button class="btn button">{nextStepTitle}</button>
      {/if}    
     </div>
   </div>
@@ -32,11 +33,16 @@
     right: 0;
     bottom: 0;
   } 
+
   .button {
-    margin: 10px;
-    padding: 10px;
-    background: black;
-    height: 50%;
+    padding: 5px 20px;
+    margin: 20px;
+    background: linear-gradient(253deg, #00FFA3, #DC1FFF);
+    font-weight: bold;
+  }
+
+  .button:hover {
+    box-shadow: black 2px 2px 1px;
   }
 
 </style>
