@@ -4,6 +4,8 @@
 
   import Header from 'src/components/shared/layout/Header.svelte'
   import Footer from 'src/components/shared/layout/Footer.svelte'
+  import FooterButton from 'src/components/shared/layout/FooterButton.svelte'
+
 import { getChainsList } from 'src/utils/constants';
 
   const chainColors = getChainColors(CHAINS.SOLANA)
@@ -12,9 +14,11 @@ import { getChainsList } from 'src/utils/constants';
 
 <div class="row">
   <Header chainId="Solana" chainColors={chainColors} themeColors={themeColors}></Header>
-  <Footer></Footer>  
+  <Footer>
+    <FooterButton slot="previous" title="<- Previous: Welcome to the Solana Pathway"
+      background="white"></FooterButton>
+
+    <FooterButton slot="next" title="Next: Setup the Project ->"
+        background="linear-gradient(253deg, #00FFA3,#DC1FFF)"></FooterButton>
+  </Footer>  
 </div>
-
-
-<style>
-</style>

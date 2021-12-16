@@ -4,20 +4,18 @@
   //export let chain;
   export let isFirstStep = false;
   export let isLastStep = false;
-  export let nextStepTitle = "Next: Setup the project";
-  export let previousStepTitle = "Previous";
 </script>
 
 <div class="footer" style="height: {FOOTER_HEIGHT}">
   <div class="d-flex align-items-center justify-content-between">
     <div class="">
         {#if !isFirstStep}
-          <button class="btn button">{previousStepTitle}</button>
+          <slot name="previous"><span>Previous button</span></slot>     
         {/if}
       </div>
     <div class="">
       {#if !isLastStep}
-      <button class="btn button">{nextStepTitle}</button>
+        <slot name="next"><span>Next button</span></slot>
      {/if}    
     </div>
   </div>
@@ -33,16 +31,4 @@
     right: 0;
     bottom: 0;
   } 
-
-  .button {
-    padding: 5px 20px;
-    margin: 20px;
-    background: linear-gradient(253deg, #00FFA3, #DC1FFF);
-    font-weight: bold;
-  }
-
-  .button:hover {
-    box-shadow: black 2px 2px 1px;
-  }
-
 </style>
