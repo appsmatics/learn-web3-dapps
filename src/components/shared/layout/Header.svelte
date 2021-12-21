@@ -6,7 +6,6 @@
 
   export let chainId
   export let chainColors
-  export let themeColors
 </script>
 
 
@@ -34,7 +33,7 @@
             target="_blank"
             rel="noreferrer"
             >
-            <div class="discord" style="background: {themeColors.discordBackground}">
+            <div class="discord">
               Need help? Find us on
               <img src='discord.svg' alt="Discord" height={22} width={100}>
             </div>
@@ -77,5 +76,6 @@
     background: yellow;
     color: black !important;
     box-shadow: #9b9b9b 0px 0px 5px 1px;
+    background: var(--discord-background)
   }
 </style>

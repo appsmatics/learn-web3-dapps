@@ -1,11 +1,6 @@
 import {CHAINS} from './types';
 import type {ChainColorsType} from './types'
 
-export const themeColors = {
-  discordBackground: '#FFF29B',
-  darkBackground: 'rgb(33, 37, 41)',
-}
-
 export const getChainColors = (chainId: CHAINS): ChainColorsType => {
   return {
     primaryColor: getPrimaryColor(chainId),
