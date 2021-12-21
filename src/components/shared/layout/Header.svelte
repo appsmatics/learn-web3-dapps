@@ -1,9 +1,6 @@
 <script lang="ts">
   import {HEADER_HEIGHT} from 'src/utils/constants';
 
-  //let primary_color = 'linear-gradient(253deg, #00FFA3, #DC1FFF)'
-  // import logoSVG from 'public/figment-learn-compact.svg';
-
   export let chainId
   export let chainColors
 </script>

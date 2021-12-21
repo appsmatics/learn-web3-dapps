@@ -10,13 +10,10 @@ export const getChainColors = (chainId: CHAINS): ChainColorsType => {
 
 const getPrimaryColor = (chainId: CHAINS) => {
   if (chainId === CHAINS.SOLANA) {
-    //return '#89fdd3';
-    // TODO: linear-gradient does not work with CSS variables :(
     return 'linear-gradient(253deg, #00FFA3, #DC1FFF)';
   } else if (chainId === CHAINS.AVALANCHE) {
     return '#e84141';
   } else if (chainId === CHAINS.THE_GRAPH) {
-    //return '#392f70';
     return 'linear-gradient(130deg, #5943d0, #151324)';
   } else if (chainId === CHAINS.POLYGON) {
     return '#966ae0';

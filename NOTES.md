@@ -27,3 +27,10 @@ const aliases = alias({
   ]
 });
 
+## pass css vars to all components. place in top of global.css
+:root {
+	--discord-background: #FFF29B;
+  --dark-background: rgb(33, 37, 41);
+}
+
+

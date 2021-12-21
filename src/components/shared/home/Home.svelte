@@ -1,7 +1,4 @@
 <script lang="ts">
-  //TODO: Need to specify the non aliased path here and the .ts extension
-  // else it does not work. Need to investigate the aliases plugin config.
-  // Sti
   import {getDataIndexingItems, getIdentityItems} from 'src/utils/constants'
   import {getStorageItems, getChainsList} from 'src/utils/constants'
 
