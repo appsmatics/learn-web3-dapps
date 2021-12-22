@@ -1,22 +1,14 @@
 <script lang="ts">
   import {FOOTER_HEIGHT} from 'src/utils/constants';
-
-  //export let chain;
-  export let isFirstStep = false;
-  export let isLastStep = false;
 </script>
 
 <div class="footer" style="height: {FOOTER_HEIGHT}">
   <div class="d-flex align-items-center justify-content-between">
-    <div class="">
-        {#if !isFirstStep}
-          <slot name="previous"><span>Previous button</span></slot>     
-        {/if}
-      </div>
-    <div class="">
-      {#if !isLastStep}
-        <slot name="next"><span>Next button</span></slot>
-     {/if}    
+    <div>
+      <slot name="previous"><span></span></slot>     
+    </div>
+    <div>
+        <slot name="next"><span></span></slot>
     </div>
   </div>
 </div>

@@ -1,5 +1,4 @@
 <script>
-  import {currentStep} from 'src/utils/store'
   export let title="";
 
   export let disabled = false;
@@ -7,17 +6,13 @@
   
   export let background="";
   export let disabledBackground = "white"
+  export let buttonClicked
 
   $: visibility = visible?"visible":"hidden"
 
   $: backgnd = disabled ? disabledBackground : background
   $: classs = disabled? "disabled" : "button"
   
-  let buttonClicked = () => {
-    currentStep.update(n => n+1)
-  }
-  
-
 </script>
 
 {#if visible}
