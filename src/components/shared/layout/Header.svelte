@@ -12,6 +12,7 @@
   </a>
 </nav> -->
 
+<header class="header">
 <nav class="navbar navbar-custom justify-content-between" style="height: {HEADER_HEIGHT}px; background: {chainColors.primaryColor}">
       <div class="d-flex">
         <div class="p-3">
@@ -38,6 +39,7 @@
         </div>
       </div>
 </nav>
+</header>
 
 <style>
   .navbar-custom {

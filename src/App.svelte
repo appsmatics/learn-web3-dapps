@@ -1,7 +1,7 @@
 <script lang="ts">	
 	import {Router, Route} from 'svelte-routing'
 	import Home from 'src/components/shared/home/Home.svelte'
-	import Solana from 'src/components/protocols/solana/Solana.svelte'
+	import Solana from 'src/components/protocols/solana/Home.svelte'
 </script>
 
 <Router url="">

@@ -576,30 +576,30 @@ export const getChainsList = () : ChainType[] => {
     CHAINS_CONFIG[CHAINS.CELO],
   ]
 }
-export const hasNextStep = (chainId: CHAINS, step: number) : boolean => {
+export const hasNextStep = (chainId: CHAINS, currStep: number) : boolean => {
   const chain = CHAINS_CONFIG[chainId]
   const steps = chain.steps
   console.log(steps.length)
-  return (step < steps.length -1) ? true : false
+  return (currStep < steps.length -1) ? true : false
 }
 
-export const getNextStep = (chainId: CHAINS, step: number) : number => {
+export const getNextStep = (chainId: CHAINS, currStep: number) : number => {
   const chain = CHAINS_CONFIG[chainId]
   const steps = chain.steps
   
-  if (step == steps.length -1) return step
-  return (step+1);
+  if (currStep == steps.length -1) return currStep
+  return (currStep+1);
 }
 
-export const hasPreviousStep = (chainId: CHAINS, step: number) : boolean => {
-  return (step <= 0) ? false : true
+export const hasPreviousStep = (chainId: CHAINS, currStep: number) : boolean => {
+  return (currStep <= 0) ? false : true
 }
 
-export const getPreviousStep = (chainId: CHAINS, step: number) : number => {
+export const getPreviousStep = (chainId: CHAINS, currStep: number) : number => {
 
   const chain = CHAINS_CONFIG[chainId]
   const steps = chain.steps
 
-  if (step <= 0) return -1
-  return (step-1);
+  if (currStep <= 0) return -1
+  return (currStep-1);
 }
