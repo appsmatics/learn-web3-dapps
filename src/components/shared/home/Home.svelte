@@ -4,7 +4,7 @@
 
   import ChainRow from './ChainRow.svelte';
 
-  export let brand = "Appsmatics"
+  export let brand = "Figment"
 </script>
 
 

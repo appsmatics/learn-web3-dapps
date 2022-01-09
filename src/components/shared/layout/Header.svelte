@@ -12,6 +12,15 @@
   </a>
 </nav> -->
 
+<svelte:head>
+  <title>{`Figment Learn - ${chainId} Pathway`}</title>
+  <meta
+    name="description"
+    content="Figment Learn's Web 3 education courses"
+  />
+  <link rel="icon" href="/favicon.ico" />
+</svelte:head>
+
 <header class="header">
 <nav class="navbar navbar-custom justify-content-between" style="height: {HEADER_HEIGHT}px; background: {chainColors.primaryColor}">
       <div class="d-flex">
