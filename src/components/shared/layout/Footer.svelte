@@ -1,5 +1,9 @@
 <script lang="ts">
-  import {FOOTER_HEIGHT} from 'src/utils/constants';
+  import {FOOTER_HEIGHT} from 'src/utils/config';
+  
+
+
+
 </script>
 
 <div class="footer" style="height: {FOOTER_HEIGHT}">

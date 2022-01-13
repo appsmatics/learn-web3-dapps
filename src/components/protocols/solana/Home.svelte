@@ -1,13 +1,13 @@
 <script lang="ts">
   import {getChainColors} from 'src/utils/colors'
   import {CHAINS} from 'src/utils/types'
-  import {HEADER_HEIGHT} from 'src/utils/constants';
+  import {HEADER_HEIGHT} from 'src/utils/config';
 
   import Header from 'src/components/shared/layout/Header.svelte'
   import Footer from 'src/components/shared/layout/Footer.svelte'
   import FooterButton from 'src/components/shared/layout/FooterButton.svelte'
 
-  import { CHAINS_CONFIG, hasPreviousStep, getPreviousStep, hasNextStep, getNextStep } from 'src/utils/constants';
+  import { CHAINS_CONFIG, hasPreviousStep, getPreviousStep, hasNextStep, getNextStep } from 'src/utils/config';
 
   import {currentStep} from 'src/utils/store'
 

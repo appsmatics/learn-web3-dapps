@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {HEADER_HEIGHT} from 'src/utils/constants';
+  import {HEADER_HEIGHT} from 'src/utils/config';
 
   export let chainId
   export let chainColors

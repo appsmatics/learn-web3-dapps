@@ -1,6 +1,6 @@
 <script lang="ts">
-  import {getDataIndexingItems, getIdentityItems} from 'src/utils/constants'
-  import {getStorageItems, getChainsList} from 'src/utils/constants'
+  import {getDataIndexingItems, getIdentityItems} from 'src/utils/config'
+  import {getStorageItems, getChainsList} from 'src/utils/config'
 
   import ChainRow from './ChainRow.svelte';
 
