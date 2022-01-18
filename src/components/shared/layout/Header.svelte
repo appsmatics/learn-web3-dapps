@@ -6,12 +6,6 @@
 </script>
 
 
-<!-- <nav class="navbar navbar-custom">
-  <a class="navbar-brand" href={"#"}>
-    Light color background
-  </a>
-</nav> -->
-
 <svelte:head>
   <title>{`Figment Learn - ${chainId} Pathway`}</title>
   <meta
