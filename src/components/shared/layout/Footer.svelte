@@ -1,19 +1,31 @@
 <script lang="ts">
   import {FOOTER_HEIGHT} from 'src/utils/config';
-  
+  import FooterButton from './FooterButton.svelte'
 
-
-
+  export let isFirstStep = true
+  export let isLastStep = false
+  export let chainColors
+  export let prev = null
+  export let next = null
+  export let justify = 'end'
+  export let previousTitle
+  export let nextTitle
 </script>
 
 <div class="footer" style="height: {FOOTER_HEIGHT}">
-  <div class="d-flex align-items-center justify-content-between">
-    <div>
-      <slot name="previous"><span></span></slot>     
-    </div>
-    <div>
-        <slot name="next"><span></span></slot>
-    </div>
+  <div class="d-flex align-items-center {justify}">
+    <FooterButton title="<- Prev: {previousTitle}"
+        background="white"
+        visible={!isFirstStep}
+        buttonClicked = {prev}
+        >
+      </FooterButton>
+      <FooterButton slot="next" title="Next: {nextTitle} ->"
+          background="linear-gradient(253deg, #00FFA3,#DC1FFF)"
+          visible={!isLastStep}
+          buttonClicked = {next}
+          >
+      </FooterButton>
   </div>
 </div>
 
