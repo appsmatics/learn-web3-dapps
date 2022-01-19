@@ -14,13 +14,13 @@
 
 <div class="footer" style="height: {FOOTER_HEIGHT}">
   <div class="d-flex align-items-center {justify}">
-    <FooterButton title="<- Prev: {previousTitle}"
+    <FooterButton title="<- {previousTitle}"
         background="white"
         visible={!isFirstStep}
         buttonClicked = {prev}
         >
       </FooterButton>
-      <FooterButton slot="next" title="Next: {nextTitle} ->"
+      <FooterButton slot="next" title="{nextTitle} ->"
           background="linear-gradient(253deg, #00FFA3,#DC1FFF)"
           visible={!isLastStep}
           buttonClicked = {next}
