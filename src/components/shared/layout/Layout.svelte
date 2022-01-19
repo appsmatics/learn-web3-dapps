@@ -8,14 +8,13 @@
     import {appState, prev, next} from 'src/utils/store'
 
     const currentChain = $appState.currentChain
-    const chainColors = getChainColors(currentChain.id)
-    const isOneColumn = $appState.currentStep.isOneColumn   
+    const chainColors = getChainColors(currentChain.id) 
   </script>
   
     <Header chainId={currentChain.id} chainColors={chainColors}></Header>
     <main class="" style="margin-top: {HEADER_HEIGHT}px">
       <div class="row" style="height: 100vh">
-        {#if isOneColumn}
+        {#if $appState.currentStep.isOneColumn}
           <div class="col">
             <div class="container">
               <slot name="left-panel">Left Panel</slot>
@@ -32,7 +31,9 @@
       </div>
     </main>
     <Footer isFirstStep={$appState.isFirstStep} isLastStep={$appState.isLastStep}
-      chainColors={chainColors} prev={prev} next={next}/>  
+      chainColors={chainColors} 
+      previousTitle={$appState.previousTitle} nextTitle={$appState.nextTitle} justify={$appState.justify}
+      prev={prev} next={next}/>  
   
   <style>
     .left-panel {

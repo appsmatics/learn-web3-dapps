@@ -8,17 +8,19 @@
   export let prev = null
   export let next = null
   export let justify = 'end'
+  export let previousTitle
+  export let nextTitle
 </script>
 
 <div class="footer" style="height: {FOOTER_HEIGHT}">
-  <div class="d-flex align-items-center justify-content-{justify}">
-    <FooterButton title="<- Prev: {" ... "}"
+  <div class="d-flex align-items-center {justify}">
+    <FooterButton title="<- Prev: {previousTitle}"
         background="white"
         visible={!isFirstStep}
         buttonClicked = {prev}
         >
       </FooterButton>
-      <FooterButton slot="next" title="Next: {" ... "} ->"
+      <FooterButton slot="next" title="Next: {nextTitle} ->"
           background="linear-gradient(253deg, #00FFA3,#DC1FFF)"
           visible={!isLastStep}
           buttonClicked = {next}

@@ -16,8 +16,12 @@ export const appState = derived([currentChain, currentStepIndex], ([$currentChai
   const justify = getJustify (isFirstStep, isLastStep)
 
   const currentStep = $currentChain.steps[$currentStepIndex]
+  console.log(currentStep.isOneColumn)
   const prevStep = isFirstStep? null : $currentChain.steps[$currentStepIndex-1]
   const nextStep = isLastStep? null : $currentChain.steps[$currentStepIndex+1]
+
+  const previousTitle = prevStep? prevStep.title : "" 
+  const nextTitle = nextStep? nextStep.title : "" 
 
   return {
     currentChain: $currentChain,
@@ -27,8 +31,10 @@ export const appState = derived([currentChain, currentStepIndex], ([$currentChai
     isLastStep: isLastStep,
     justify: justify,
     currentStep: currentStep,
-    prevStep: prevStep,
-    nextStep: nextStep,
+    // prevStep: prevStep,
+    // nextStep: nextStep,
+    previousTitle: previousTitle,
+    nextTitle: nextTitle,
     isCompleted: false,
   }
 })
@@ -51,43 +57,13 @@ export const next = () => {
   }
 }
 
-
+//Bootstrap-5 classes
 const getJustify = (isFirstStep, isLastStep) => {
   if (isFirstStep) {
-    return ('end'); 
+    return ('justify-content-end'); 
   } else if (isLastStep) {
-    return ('start');
+    return ('justify-content-start');
   } else {
-    return ('between');
+    return ('justify-content-between');
   }
 }
-
-/*
-const hasNextStep = (chainId: CHAINS, currStep: number) : boolean => {
-  const chain = CHAINS_CONFIG[chainId]
-  const steps = chain.steps
-  console.log(steps.length)
-  return (currStep < steps.length -1) ? true : false
-}
-
-const getNextStep = (chainId: CHAINS, currStep: number) : number => {
-  const chain = CHAINS_CONFIG[chainId]
-  const steps = chain.steps
-  
-  if (currStep == steps.length -1) return currStep
-  return (currStep+1);
-}
-
-const hasPreviousStep = (chainId: CHAINS, currStep: number) : boolean => {
-  return (currStep <= 0) ? false : true
-}
-
-const getPreviousStep = (chainId: CHAINS, currStep: number) : number => {
-
-  const chain = CHAINS_CONFIG[chainId]
-  const steps = chain.steps
-
-  if (currStep <= 0) return -1
-  return (currStep-1);
-}
-*/
