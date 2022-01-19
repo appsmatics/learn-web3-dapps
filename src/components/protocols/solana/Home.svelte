@@ -10,6 +10,6 @@
 </script>
 
 <Layout>
-  <h1 slot="left-panel">{$appState.currentStep.id}</h1>
-  <h2 slot="right-panel">{$appState.currentStep.id}</h2>
+  <h1 slot="left-panel">{$appState.currentStep.title}</h1>
+  <h2 slot="right-panel">{$appState.currentStep.title}</h2>
 </Layout>

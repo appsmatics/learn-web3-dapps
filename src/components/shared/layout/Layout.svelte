@@ -8,18 +8,27 @@
     import {appState, prev, next} from 'src/utils/store'
 
     const currentChain = $appState.currentChain
-    const chainColors = getChainColors(currentChain.id)   
+    const chainColors = getChainColors(currentChain.id)
+    const isOneColumn = $appState.currentStep.isOneColumn   
   </script>
   
     <Header chainId={currentChain.id} chainColors={chainColors}></Header>
     <main class="" style="margin-top: {HEADER_HEIGHT}px">
       <div class="row" style="height: 100vh">
-        <div class="col left-panel">
-          <slot name="left-panel">Left Panel</slot>
-        </div>
-        <div class="col right-panel">
-          <slot name="right-panel">Right Panel</slot>
-        </div>
+        {#if isOneColumn}
+          <div class="col">
+            <div class="container">
+              <slot name="left-panel">Left Panel</slot>
+            </div>
+          </div>
+        {:else}
+          <div class="col left-panel">
+            <slot name="left-panel">Left Panel</slot>
+          </div>
+          <div class="col right-panel">
+            <slot name="right-panel">Right Panel</slot>
+          </div>
+        {/if}
       </div>
     </main>
     <Footer isFirstStep={$appState.isFirstStep} isLastStep={$appState.isLastStep}

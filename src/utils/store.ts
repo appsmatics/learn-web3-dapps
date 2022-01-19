@@ -1,4 +1,4 @@
-import { writable, derived } from 'svelte/store';
+import {get, writable, derived } from 'svelte/store';
 
 
 export const currentChain = writable(null) 
@@ -10,8 +10,6 @@ export const appState = derived([currentChain, currentStepIndex], ([$currentChai
   if (!$currentChain) return null
 
   const numSteps = ($currentChain == null)? 0 : $currentChain.steps.length
-  const isOneColumn = $currentChain.steps[$currentStepIndex].isOneColumn
-
   const isFirstStep = $currentStepIndex == 0
   const isLastStep =  $currentStepIndex == $currentChain.steps.length - 1
 
@@ -24,6 +22,7 @@ export const appState = derived([currentChain, currentStepIndex], ([$currentChai
   return {
     currentChain: $currentChain,
     currentStepIndex: $currentStepIndex,
+    numSteps: numSteps,
     isFirstStep: isFirstStep,
     isLastStep: isLastStep,
     justify: justify,
@@ -35,21 +34,31 @@ export const appState = derived([currentChain, currentStepIndex], ([$currentChai
 })
 
 export const prev = () => {
-
+  const state = get(appState)
+  const currStepIndex = state.currentStepIndex 
+  if (currStepIndex > 0) {
+    currentStepIndex.update(n => n-1)
+  }
 }
 
 export const next = () => {
-  
+  const state = get(appState)
+  const numSteps = state.numSteps
+  const currStepIndex = state.currentStepIndex
+  console.log(numSteps, currStepIndex) 
+  if (currStepIndex < numSteps-1) {
+    currentStepIndex.update(n => n+1)
+  }
 }
 
 
 const getJustify = (isFirstStep, isLastStep) => {
   if (isFirstStep) {
-    return ('start'); 
+    return ('end'); 
   } else if (isLastStep) {
-    return ('end');
+    return ('start');
   } else {
-    return ('space-between');
+    return ('between');
   }
 }
 
