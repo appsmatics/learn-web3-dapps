@@ -16,7 +16,6 @@ export const appState = derived([currentChain, currentStepIndex], ([$currentChai
   const justify = getJustify (isFirstStep, isLastStep)
 
   const currentStep = $currentChain.steps[$currentStepIndex]
-  console.log(currentStep.isOneColumn)
   const prevStep = isFirstStep? null : $currentChain.steps[$currentStepIndex-1]
   const nextStep = isLastStep? null : $currentChain.steps[$currentStepIndex+1]
 
@@ -51,7 +50,7 @@ export const next = () => {
   const state = get(appState)
   const numSteps = state.numSteps
   const currStepIndex = state.currentStepIndex
-  console.log(numSteps, currStepIndex) 
+  // console.log(numSteps, currStepIndex) 
   if (currStepIndex < numSteps-1) {
     currentStepIndex.update(n => n+1)
   }
