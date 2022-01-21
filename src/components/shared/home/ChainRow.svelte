@@ -4,7 +4,7 @@
   import Protocol from './Protocol.svelte'
   export let title;
   export let chains : ChainType[];
-  $: console.log(chains)
+  // $: console.log(chains)
 </script>
 
 <div class="section-container">

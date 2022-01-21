@@ -8,7 +8,7 @@
   const chainColors = getChainColors(chain.id)
   const colorCSS = `--primary-color: ${chainColors.primaryColor};
     --secondary-color: ${chainColors.secondaryColor}`
-  $: console.log(colorCSS)
+  // $: console.log(colorCSS)
 
   // export let label = "Solana"
   // export let logoUrl = "https://cryptologos.cc/logos/solana-sol-logo.svg?v=010"
