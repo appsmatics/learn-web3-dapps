@@ -2,6 +2,7 @@
 //import axios from 'axios'
 import {Connection} from 'solanaWeb3';
 
+let alertMessage = "Not Connected !"
 const connect = async () => {
   try {
     const connection = new Connection('https://api.devnet.solana.com', 'confirmed')
@@ -21,6 +22,7 @@ const connect = async () => {
 const connectClicked = async () => {
   const version = await connect()
   console.log(version)
+  alertMessage = `Solano Core version: ${version}`
 }
 
 </script>
@@ -32,7 +34,7 @@ const connectClicked = async () => {
       <i class="fas fa-power-off"></i>
     </button>
     <span class="alert alert-primary">
-      Not Connected !
+      {alertMessage}
     </span>
   </div>
 </div>
