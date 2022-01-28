@@ -4,22 +4,22 @@
   import {CHAINS_CONFIG} from 'src/utils/config'
 
   import Layout from 'src/components/shared/layout/Layout.svelte'
-  import {currentChain, appState} from 'src/utils/store'
+  import {currentProtocol, stepState} from 'src/utils/store'
 
   import Connect from './Connect.svelte'
+  import Keypair from './Keypair.svelte'
+  import Fund from './Fund.svelte'
 
-  $currentChain = CHAINS_CONFIG[CHAINS.SOLANA]
+  $currentProtocol = CHAINS_CONFIG[CHAINS.SOLANA]
 
 </script>
 
 <Layout>
-  <h1 slot="left-panel">{$appState.currentStep.title}</h1>
-  <div slot="right-panel">
-    {#if $appState.currentStep.id == PROTOCOL_STEPS_ID.CHAIN_CONNECTION}
-      <Connect></Connect>
-    {:else}
-      <h3>Not implemented Step</h3>
-    {/if}
+  <h1 slot="left-panel">{$stepState.currentStep.title}</h1>
+  <div slot="proto-panel">
+      <Connect stepState={$stepState}></Connect>
+      <Keypair step={$stepState.currentStep}></Keypair>
+      <Fund step={$stepState.currentStep}></Fund>
   </div>
 </Layout>
 

@@ -183,6 +183,7 @@ export type StepType = {
   title: string;
   skippable?: boolean;
   isOneColumn?: boolean;
+  isComplete?: boolean;
 };
 
 export enum UserActivity {
@@ -198,15 +199,15 @@ export type MarkdownForChainIdT = {
 //-----------------------------------------------------------
 // Global's State
 export type GlobalStateT = {
-  currentChainId?: CHAINS;
+  currentProtocolId?: CHAINS;
   protocols: ProtocolsStateT;
 };
 
 export type ProtocolsStateT = {
-  [Key in CHAINS]: ProtocolStateT;
+  [Key in CHAINS]: protocolStateT;
 };
 
-export type ProtocolStateT = {
+export type protocolStateT = {
   id: CHAINS;
   label: string;
   logoUrl: string;
@@ -243,10 +244,10 @@ export type InnerStateT = {
 };
 
 export type LocalStorageStateT = {
-  [Key in CHAINS]: LocalStorageProtocolStateT;
+  [Key in CHAINS]: LocalStorageprotocolStateT;
 };
 
-export type LocalStorageProtocolStateT = {
+export type LocalStorageprotocolStateT = {
   currentStepId: PROTOCOL_STEPS_ID;
   innerState?: InnerStateT;
 };

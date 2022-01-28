@@ -1,8 +1,11 @@
 <script>
 //import axios from 'axios'
 import {Connection} from 'solanaWeb3';
+import StepPanel from './StepPanel.svelte'
 
-let alertMessage = "Not Connected !"
+export let stepState = null;
+
+let alertMessage = "Not Connected to Solana Core!"
 const connect = async () => {
   try {
     const connection = new Connection('https://api.devnet.solana.com', 'confirmed')
@@ -24,17 +27,25 @@ const connectClicked = async () => {
   console.log(version)
   alertMessage = `Solano Core version: ${version}`
 }
-
 </script>
 
-<div>
-  <h2>Connect to Solana</h2>
-  <div class="flex mt-4">
-    <button class="btn btn-primary mx-3" on:click={connectClicked}>
-      <i class="fas fa-power-off"></i>
-    </button>
-    <span class="alert alert-primary">
-      {alertMessage}
-    </span>
+<StepPanel completed={false}>
+  <div slot="step-content">
+    <div class="col">
+      <h4>{stepState.currentStep.title}</h4>
+    </div>
+    <div class="col d-flex flex-row justify-content-end align-items-center">
+      <!-- <div class="row"> -->
+        <div class="alert alert-primary mx-4">
+          {alertMessage}
+        </div>
+        <button class="btn btn-primary" on:click={connectClicked}>
+          Connect <i class="fas fa-power-off"></i>
+        </button>
+      <!-- </div> -->
+    </div>
   </div>
-</div>
+</StepPanel>
+
+<style>
+</style>

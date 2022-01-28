@@ -39,21 +39,17 @@ export const CHAINS_CONFIG: ChainsType = {
     network: SOLANA_NETWORKS.DEVNET,
     active: true,
     steps: [
-      //TODO: remove after dev temporarily connect is first step
-      {
-        id: PROTOCOL_STEPS_ID.CHAIN_CONNECTION,
-        title: 'Connect to Solana',
-      },
-      {
-        id: PROTOCOL_STEPS_ID.PREFACE,
-        title: 'Welcome to the Solana Pathway',
-        isOneColumn: true,
-      },
-      {
-        id: PROTOCOL_STEPS_ID.PROJECT_SETUP,
-        title: 'Setup the project',
-        isOneColumn: true,
-      },
+      //TODO: each step being worked on is temporarily first step
+      // {
+      //   id: PROTOCOL_STEPS_ID.PREFACE,
+      //   title: 'Welcome to the Solana Pathway',
+      //   isOneColumn: true,
+      // },
+      // {
+      //   id: PROTOCOL_STEPS_ID.PROJECT_SETUP,
+      //   title: 'Setup the project',
+      //   isOneColumn: true,
+      // },
       {
         id: PROTOCOL_STEPS_ID.CHAIN_CONNECTION,
         title: 'Connect to Solana',
