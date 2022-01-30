@@ -1,4 +1,4 @@
-export enum CHAINS {
+export enum CHAIN {
   ARWEAVE = 'arweave',
   AVALANCHE = 'avalanche',
   CELO = 'celo',
@@ -13,61 +13,61 @@ export enum CHAINS {
 }
 
 // Protocol's Enum
-export type PROTOCOLS =
-  | POLYGON_PROTOCOLS
-  | SOLANA_PROTOCOLS
-  | POLKADOT_PROTOCOLS
-  | AVALANCHE_PROTOCOLS
-  | SECRET_PROTOCOLS
-  | NEAR_PROTOCOLS
-  | CELO_PROTOCOLS
-  | TEZOS_PROTOCOLS
-  | CERAMIC_PROTOCOLS
-  | THE_GRAPH_PROTOCOLS
-  | ARWEAVE_PROTOCOLS;
+export type PROTOCOL =
+  | POLYGON_PROTOCOL
+  | SOLANA_PROTOCOL
+  | POLKADOT_PROTOCOL
+  | AVALANCHE_PROTOCOL
+  | SECRET_PROTOCOL
+  | NEAR_PROTOCOL
+  | CELO_PROTOCOL
+  | TEZOS_PROTOCOL
+  | CERAMIC_PROTOCOL
+  | THE_GRAPH_PROTOCOL
+  | ARWEAVE_PROTOCOL;
 
-export enum THE_GRAPH_PROTOCOLS {
+export enum THE_GRAPH_PROTOCOL {
   GRAPHQL = 'GRAPHQL',
 }
 
-export enum AVALANCHE_PROTOCOLS {
+export enum AVALANCHE_PROTOCOL {
   RPC = 'RPC',
 }
 
-export enum CELO_PROTOCOLS {
+export enum CELO_PROTOCOL {
   RPC = 'RPC',
 }
 
-export enum SECRET_PROTOCOLS {
+export enum SECRET_PROTOCOL {
   RPC = 'RPC',
   LCD = 'LCD',
 }
 
-export enum NEAR_PROTOCOLS {
+export enum NEAR_PROTOCOL {
   RPC = 'RPC',
 }
 
-export enum TEZOS_PROTOCOLS {
+export enum TEZOS_PROTOCOL {
   RPC = 'RPC',
 }
 
-export enum POLYGON_PROTOCOLS {
+export enum POLYGON_PROTOCOL {
   RPC = 'RPC',
   JSON_RPC = 'JSON_RPC',
   WS = 'WS',
 }
 
-export enum POLKADOT_PROTOCOLS {
+export enum POLKADOT_PROTOCOL {
   RPC = 'RPC',
   WS = 'WS',
 }
 
-export enum SOLANA_PROTOCOLS {
+export enum SOLANA_PROTOCOL {
   RPC = 'RPC',
   WS = 'WS',
 }
 
-export enum ARWEAVE_PROTOCOLS {
+export enum ARWEAVE_PROTOCOL {
   RPC = 'RPC',
 }
 
@@ -81,92 +81,92 @@ export enum CHAIN_PROVIDERS {
 }
 
 // NETWORKS ----------------------
-export enum AVALANCHE_NETWORKS {
+export enum AVALANCHE_NETWORK {
   MAINNET = 'MAINNET',
   FUJI = 'FUJI',
   DATAHUB = 'datahub',
 }
 
-export enum CELO_NETWORKS {
+export enum CELO_NETWORK {
   MAINNET = 'MAINNET',
   ALFAJORES = 'alfajores',
 }
 
-export enum SECRET_NETWORKS {
+export enum SECRET_NETWORK {
   MAINNET = 'MAINNET',
   TESTNET = 'HOLODECK-2',
 }
 
-export enum NEAR_NETWORKS {
+export enum NEAR_NETWORK {
   MAINNET = 'MAINNET',
   TESTNET = 'TESTNET',
   DATAHUB = 'datahub',
 }
 
-export enum TEZOS_NETWORKS {
+export enum TEZOS_NETWORK {
   MAINNET = 'MAINNET',
   TESTNET = 'TESTNET',
 }
 
-export enum POLKADOT_NETWORKS {
+export enum POLKADOT_NETWORK {
   WESTEND = 'WESTEND',
   MAINNET = 'MAINNET',
 }
 
-export enum POLYGON_NETWORKS {
+export enum POLYGON_NETWORK {
   MAINNET = 'MAINNET',
   TESTNET = 'TESTNET',
 }
 
-export enum SOLANA_NETWORKS {
+export enum SOLANA_NETWORK {
   MAINNET = 'MAINNET',
   DEVNET = 'devnet',
   DATAHUB = 'datahub',
   LOCALNET = 'localnet',
 }
 
-export enum CERAMIC_NETWORKS {
+export enum CERAMIC_NETWORK {
   TESTNET = 'TESTNET',
 }
 
-export enum CERAMIC_PROTOCOLS {
+export enum CERAMIC_PROTOCOL {
   HTTP = 'HTTP',
 }
 
-export enum THE_GRAPH_NETWORKS {
+export enum THE_GRAPH_NETWORK {
   LOCALNET = 'localnet',
   STUDIO = 'studio',
 }
 
-export enum ARWEAVE_NETWORKS {
+export enum ARWEAVE_NETWORK {
   MAINNET = 'mainnet',
 }
 
 // -----------------------------
 
-export type NETWORKS =
-  | POLYGON_NETWORKS
-  | AVALANCHE_NETWORKS
-  | SOLANA_NETWORKS
-  | POLKADOT_NETWORKS
-  | NEAR_NETWORKS
-  | SECRET_NETWORKS
-  | CELO_NETWORKS
-  | TEZOS_NETWORKS
-  | THE_GRAPH_NETWORKS
-  | CERAMIC_NETWORKS
-  | TEZOS_NETWORKS
-  | ARWEAVE_NETWORKS;
+export type NETWORK =
+  | POLYGON_NETWORK
+  | AVALANCHE_NETWORK
+  | SOLANA_NETWORK
+  | POLKADOT_NETWORK
+  | NEAR_NETWORK
+  | SECRET_NETWORK
+  | CELO_NETWORK
+  | TEZOS_NETWORK
+  | THE_GRAPH_NETWORK
+  | CERAMIC_NETWORK
+  | TEZOS_NETWORK
+  | ARWEAVE_NETWORK;
 
 // ---------------------------------------------------
 export type ChainType = {
-  id: CHAINS;
+  id: CHAIN;
   label: string;
   active: boolean;
   logoUrl: string;
   steps: StepType[];
-  protocol: PROTOCOLS;
-  network: NETWORKS;
+  protocol: PROTOCOL;
+  network: NETWORK;
 };
 
 export type ChainColorsType = {
@@ -175,11 +175,11 @@ export type ChainColorsType = {
 };
 
 export type ChainsType = {
-  [key in CHAINS]: ChainType;
+  [key in CHAIN]: ChainType;
 };
 
 export type StepType = {
-  id: PROTOCOL_STEPS_ID;
+  id: PROTOCOL_STEP_ID;
   title: string;
   skippable?: boolean;
   isOneColumn?: boolean;
@@ -193,66 +193,66 @@ export enum UserActivity {
 }
 
 export type MarkdownForChainIdT = {
-  [key in PROTOCOL_STEPS_ID]: string;
+  [key in PROTOCOL_STEP_ID]: string;
 };
 
 //-----------------------------------------------------------
 // Global's State
 export type GlobalStateT = {
-  currentProtocolId?: CHAINS;
+  currentProtocolId?: CHAIN;
   protocols: ProtocolsStateT;
 };
 
 export type ProtocolsStateT = {
-  [Key in CHAINS]: protocolStateT;
+  [Key in CHAIN]: protocolStateT;
 };
 
 export type protocolStateT = {
-  id: CHAINS;
+  id: CHAIN;
   label: string;
   logoUrl: string;
-  network: NETWORKS;
-  protocol: PROTOCOLS;
+  network: NETWORK;
+  protocol: PROTOCOL;
   isActive: boolean;
   // numberOfSteps
   numberOfStep: number;
-  currentStepId: PROTOCOL_STEPS_ID;
-  firstStepId: PROTOCOL_STEPS_ID;
-  lastStepId: PROTOCOL_STEPS_ID;
+  currentStepId: PROTOCOL_STEP_ID;
+  firstStepId: PROTOCOL_STEP_ID;
+  lastStepId: PROTOCOL_STEP_ID;
   steps: ProtocolStepsT;
   innerState?: InnerStateT;
 };
 
 export type ProtocolStepT = {
-  id: PROTOCOL_STEPS_ID;
+  id: PROTOCOL_STEP_ID;
   title: string;
   isVisited: boolean;
   isSkippable: boolean;
   isOneColumn: boolean;
   isCompleted: boolean;
-  previousStepId: PROTOCOL_STEPS_ID | null;
-  nextStepId: PROTOCOL_STEPS_ID | null;
+  previousStepId: PROTOCOL_STEP_ID | null;
+  nextStepId: PROTOCOL_STEP_ID | null;
   position: number;
 };
 
 export type ProtocolStepsT = {
-  [Key in PROTOCOL_STEPS_ID]: ProtocolStepT;
+  [Key in PROTOCOL_STEP_ID]: ProtocolStepT;
 };
 
 export type InnerStateT = {
-  [Key in PROTOCOL_INNER_STATES_ID]?: string | null;
+  [Key in PROTOCOL_INNER_STATE_ID]?: string | null;
 };
 
 export type LocalStorageStateT = {
-  [Key in CHAINS]: LocalStorageprotocolStateT;
+  [Key in CHAIN]: LocalStorageprotocolStateT;
 };
 
 export type LocalStorageprotocolStateT = {
-  currentStepId: PROTOCOL_STEPS_ID;
+  currentStepId: PROTOCOL_STEP_ID;
   innerState?: InnerStateT;
 };
 
-export enum PROTOCOL_INNER_STATES_ID {
+export enum PROTOCOL_INNER_STATE_ID {
   SECRET = 'SECRET',
   PRIVATE_KEY = 'PRIVATE_KEY',
   PUBLIC_KEY = 'PUBLIC_KEY',
@@ -269,7 +269,7 @@ export enum PROTOCOL_INNER_STATES_ID {
   USER_NAME = 'USER_NAME',
 }
 
-export enum PROTOCOL_STEPS_ID {
+export enum PROTOCOL_STEP_ID {
   PREFACE = 'PREFACE',
   EXPORT_TOKEN = 'EXPORT_TOKEN',
   IMPORT_TOKEN = 'IMPORT_TOKEN',
