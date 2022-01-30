@@ -1,0 +1,394 @@
+{
+  "avalanche": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": false
+      },
+      "CREATE_KEYPAIR": {
+        "isCompleted": false
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "EXPORT_TOKEN": {
+        "isCompleted": false
+      },
+      "IMPORT_TOKEN": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "celo": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": false
+      },
+      "CREATE_ACCOUNT": {
+        "isCompleted": false
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "SWAP_TOKEN": {
+        "isCompleted": false
+      },
+      "DEPLOY_CONTRACT": {
+        "isCompleted": false
+      },
+      "GET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "SET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "near": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": false
+      },
+      "CREATE_KEYPAIR": {
+        "isCompleted": false
+      },
+      "CREATE_ACCOUNT": {
+        "isCompleted": false
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "DEPLOY_CONTRACT": {
+        "isCompleted": false
+      },
+      "GET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "SET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "polkadot": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": false
+      },
+      "CREATE_ACCOUNT": {
+        "isCompleted": false
+      },
+      "RESTORE_ACCOUNT": {
+        "isCompleted": false
+      },
+      "ESTIMATE_FEES": {
+        "isCompleted": false
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "ESTIMATE_DEPOSIT": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "polygon": {
+    "currentStepId": "GET_BALANCE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": true
+      },
+      "QUERY_CHAIN": {
+        "isCompleted": true
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "DEPLOY_CONTRACT": {
+        "isCompleted": false
+      },
+      "SET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "GET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "RESTORE_ACCOUNT": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    },
+    "innerState": {
+      "ADDRESS": "0x20F5C1511202E6f7756c6f8513c8Ad55f47D0051"
+    }
+  },
+  "secret": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": false
+      },
+      "CREATE_ACCOUNT": {
+        "isCompleted": false
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "DEPLOY_CONTRACT": {
+        "isCompleted": false
+      },
+      "GET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "SET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "solana": {
+    "currentStepId": "FUND_ACCOUNT",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": true
+      },
+      "CREATE_ACCOUNT": {
+        "isCompleted": true
+      },
+      "FUND_ACCOUNT": {
+        "isCompleted": true
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "DEPLOY_CONTRACT": {
+        "isCompleted": false
+      },
+      "SOLANA_CREATE_GREETER": {
+        "isCompleted": false
+      },
+      "GET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "SET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    },
+    "innerState": {
+      "ADDRESS": "FZAd3CrKSUnMfrufWh2hKf1SPrHo1KCQ1LYjH3CjFVSb",
+      "SECRET": "[232,120,84,232,194,190,226,232,177,4,32,93,214,89,65,143,23,240,158,209,207,106,241,125,255,93,2,113,255,53,47,244,216,65,20,237,123,237,148,236,151,138,12,255,244,161,32,85,121,241,199,212,242,249,208,245,252,244,46,147,183,246,246,236]"
+    }
+  },
+  "tezos": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": false
+      },
+      "CREATE_ACCOUNT": {
+        "isCompleted": false
+      },
+      "GET_BALANCE": {
+        "isCompleted": false
+      },
+      "TRANSFER_TOKEN": {
+        "isCompleted": false
+      },
+      "DEPLOY_CONTRACT": {
+        "isCompleted": false
+      },
+      "GET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "SET_CONTRACT_VALUE": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "ceramic": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "CHAIN_CONNECTION": {
+        "isCompleted": false
+      },
+      "LOGIN": {
+        "isCompleted": false
+      },
+      "BASIC_PROFILE": {
+        "isCompleted": false
+      },
+      "CUSTOM_DEFINITION": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "the_graph": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "GRAPH_NODE": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_SCAFFOLD": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_MANIFEST": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_SCHEMA": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_MAPPINGS": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_QUERY": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "the_graph_near": {
+    "currentStepId": "PREFACE",
+    "steps": {
+      "PREFACE": {
+        "isCompleted": true
+      },
+      "PROJECT_SETUP": {
+        "isCompleted": true
+      },
+      "GRAPH_NODE": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_SCAFFOLD": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_MANIFEST": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_SCHEMA": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_MAPPINGS": {
+        "isCompleted": false
+      },
+      "SUBGRAPH_QUERY": {
+        "isCompleted": false
+      },
+      "FINAL": {
+        "isCompleted": true
+      }
+    }
+  },
+  "arweave": {
+    "steps": {}
+  }
+}
